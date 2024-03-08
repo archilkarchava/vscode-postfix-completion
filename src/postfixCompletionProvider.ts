@@ -10,7 +10,7 @@ export class PostfixCompletionProvider implements vsc.CompletionItemProvider {
   private templates: IPostfixTemplate[] = []
   constructor(language: string) {
     this.templates = [
-      ...loadBuiltinTemplates(language),
+      // ...loadBuiltinTemplates(language),
       ...loadCustomTemplates(language)
     ]
   }
