@@ -13,7 +13,7 @@ Postfix templates for TypeScript/JavaScript/GO/Rust/More.
 
 ```json
 {
-   "postfix_complection.templates": [
+   "postfixCompletion.templates": [
       {
          "name": ":",
          "language":"go",

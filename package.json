@@ -37,7 +37,7 @@
     "configuration": {
       "title": "Postfix completion",
       "properties": {
-        "postfix_complection.templates": {
+        "postfixCompletion.templates": {
           "type": "array",
           "items": {
             "type": "object",

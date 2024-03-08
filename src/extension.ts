@@ -26,7 +26,7 @@ export function activate(context: vscode.ExtensionContext) {
 	// Now provide the implementation of the command with registerCommand
 	// The commandId parameter must match the command field in package.json
 	context.subscriptions.push(vscode.workspace.onDidChangeConfiguration(e => {
-		if (!e.affectsConfiguration('postfix_complection')) {
+		if (!e.affectsConfiguration('postfixCompletion')) {
 			return
 		}
 
@@ -41,7 +41,7 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 function registerCompletionProvider(context: vscode.ExtensionContext) {
-	const config = vscode.workspace.getConfiguration('postfix_complection')
+	const config = vscode.workspace.getConfiguration('postfixCompletion')
 	const templates = config.get<ICustomTemplateDefinition[]>('templates')
 	let containers = initIocContainer()
 

@@ -6,7 +6,7 @@ import { iocContainer } from './container'
 import { CompletionItemBuilder } from './completionItemBuilder'
 import { ICustomTemplateDefinition } from './templates/baseTemplate'
 export const loadCustomTemplates = (language: string) => {
-  const config = vscode.workspace.getConfiguration('postfix_complection')
+  const config = vscode.workspace.getConfiguration('postfixCompletion')
   const templates = config.get<ICustomTemplateDefinition[]>('templates')
   if (templates) {
     return templates.filter(v => v.language === language).filter(v => v.language && v.name && v.body).map(t => new CustomTemplate(t.language, t.name, t.description, t.body) as IPostfixTemplate)
